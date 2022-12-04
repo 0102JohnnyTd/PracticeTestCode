@@ -13,6 +13,7 @@
 		1CFE16DA293AF82900829C05 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1CFE16D8293AF82900829C05 /* Main.storyboard */; };
 		1CFE16DC293AF82D00829C05 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1CFE16DB293AF82D00829C05 /* Assets.xcassets */; };
 		1CFE16DF293AF82D00829C05 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1CFE16DD293AF82D00829C05 /* LaunchScreen.storyboard */; };
+		1CFE16E7293B5DDB00829C05 /* RockPeperScissorsGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CFE16E6293B5DDB00829C05 /* RockPeperScissorsGame.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		1CFE16DB293AF82D00829C05 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1CFE16DE293AF82D00829C05 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1CFE16E0293AF82D00829C05 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1CFE16E6293B5DDB00829C05 /* RockPeperScissorsGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RockPeperScissorsGame.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				1CFE16D2293AF82900829C05 /* AppDelegate.swift */,
 				1CFE16D4293AF82900829C05 /* SceneDelegate.swift */,
 				1CFE16D6293AF82900829C05 /* ViewController.swift */,
+				1CFE16E6293B5DDB00829C05 /* RockPeperScissorsGame.swift */,
 				1CFE16D8293AF82900829C05 /* Main.storyboard */,
 				1CFE16DB293AF82D00829C05 /* Assets.xcassets */,
 				1CFE16DD293AF82D00829C05 /* LaunchScreen.storyboard */,
@@ -138,6 +141,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1CFE16E7293B5DDB00829C05 /* RockPeperScissorsGame.swift in Sources */,
 				1CFE16D7293AF82900829C05 /* ViewController.swift in Sources */,
 				1CFE16D3293AF82900829C05 /* AppDelegate.swift in Sources */,
 				1CFE16D5293AF82900829C05 /* SceneDelegate.swift in Sources */,
