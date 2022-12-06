@@ -34,7 +34,8 @@ enum GameResult {
 }
 
 // ゲームの進行を管理する
-struct Game {
+// テスト実装の為、ModelをEquatableプロトコルに準拠させる
+struct Game: Equatable {
     // 総試合数を表すプロパティ
     var gameCount: Int
     // 勝ち回数を表すプロパティ
@@ -44,7 +45,20 @@ struct Game {
     // 引き分け回数を表すプロパティ
     var drawCount: Int
 
+    init() {
+        gameCount = 0
+        winCount = 0
+        loseCount = 0
+        drawCount = 0
+    }
 
+    init(gameCount: Int, winCount: Int, loseCount: Int, drawCount: Int) {
+        self.gameCount = gameCount
+        self.winCount = winCount
+        self.loseCount = loseCount
+        self.drawCount = drawCount
+    }
+    
     // じゃんけんに勝つとwinCountを+1
     func win() -> Game {
         Game(gameCount: self.gameCount + 1, winCount: self.winCount + 1, loseCount: self.loseCount, drawCount: self.drawCount)

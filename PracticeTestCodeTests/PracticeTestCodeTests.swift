@@ -24,4 +24,16 @@ final class PracticeTestCodeTests: XCTestCase {
         XCTAssertEqual(Hand.scissors.judge(opponent: .rock), .lose)
         XCTAssertEqual(Hand.scissors.judge(opponent: .scissors), .draw)
     }
+
+    // ゲームの進行をテスト
+    func testGameCount() {
+        var game = Game()
+        XCTAssertEqual(game, Game(gameCount: 0, winCount: 0, loseCount: 0, drawCount: 0))
+        game = game.win()
+        XCTAssertEqual(game, Game(gameCount: 1, winCount: 1, loseCount: 0, drawCount: 0))
+        game = game.lose()
+        XCTAssertEqual(game, Game(gameCount: 2, winCount: 1, loseCount: 1, drawCount: 0))
+        game = game.draw()
+        XCTAssertEqual(game, Game(gameCount: 3, winCount: 1, loseCount: 1, drawCount: 1))
+    }
 }
