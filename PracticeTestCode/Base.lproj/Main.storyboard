@@ -105,23 +105,32 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5ul-bD-Sdg">
                                                 <rect key="frame" x="0.0" y="0.0" width="100.5" height="26"/>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="filled" title="Button">
+                                                <buttonConfiguration key="configuration" style="filled" title="Rock">
                                                     <fontDescription key="titleFontDescription" type="system" pointSize="10"/>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="didTapRockButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gQH-8f-jDj"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bm1-Va-X1z">
                                                 <rect key="frame" x="108.5" y="0.0" width="101" height="26"/>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="filled" title="Button">
+                                                <buttonConfiguration key="configuration" style="filled" title="Paper">
                                                     <fontDescription key="titleFontDescription" type="system" pointSize="10"/>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="didTapPaperButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hWu-26-Qmw"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ywi-dM-ert">
                                                 <rect key="frame" x="217.5" y="0.0" width="100.5" height="26"/>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="filled" title="Button">
+                                                <buttonConfiguration key="configuration" style="filled" title="Scissors">
                                                     <fontDescription key="titleFontDescription" type="system" pointSize="10"/>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="didTapScissorsButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ucU-r0-viX"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -140,10 +149,18 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="mFR-5A-Lge" secondAttribute="bottom" priority="249" constant="48" id="heq-lV-Cw8"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="drawCountLabel" destination="CpA-rO-mLe" id="3ww-XP-SCq"/>
+                        <outlet property="gameCountLabel" destination="4Mt-aN-gVb" id="EJz-J1-ydz"/>
+                        <outlet property="loseCountLabel" destination="ean-4H-OI3" id="uDX-OH-bbn"/>
+                        <outlet property="myHandImageView" destination="OGG-lw-46D" id="PWR-Hm-JUB"/>
+                        <outlet property="opponentHandImageView" destination="pZ1-Pz-abT" id="dSx-s1-Yen"/>
+                        <outlet property="winCountLabel" destination="gc9-NO-bAb" id="jyr-yL-qWr"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="45" y="72"/>
+            <point key="canvasLocation" x="44.927536231884062" y="71.651785714285708"/>
         </scene>
     </scenes>
     <resources>
