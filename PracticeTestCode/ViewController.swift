@@ -21,15 +21,15 @@ final class ViewController: UIViewController {
     @IBOutlet private weak var opponentHandImageView: UIImageView!
 
     @IBAction private func didTapRockButton(_ sender: Any) {
-
+        startGame(myHand: Hand.rock)
     }
 
     @IBAction private func didTapPaperButton(_ sender: Any) {
-
+        startGame(myHand: Hand.paper)
     }
 
     @IBAction private func didTapScissorsButton(_ sender: Any) {
-
+        startGame(myHand: Hand.scissors)
     }
 
     // モデルのインスタンスを格納したプロパティを定義
@@ -52,6 +52,27 @@ final class ViewController: UIViewController {
     private func setUpHandImage(myHand: Hand, opponentHand: Hand) {
         myHandImageView.image = myHand.image
         opponentHandImageView.image = opponentHand.image
+    }
+
+    // ジャンケンを実行
+    private func startGame(myHand: Hand) {
+        // コンピューターのジャンケンをランダムで生成して格納
+        let opponentHand = Hand.random()
+
+        setUpHandImage(myHand: myHand, opponentHand: opponentHand)
+
+        // 勝負の結果に応じてゲームカウントをプラスしていく
+        switch myHand.judge(opponent: opponentHand) {
+        case .win:
+            game = game.win()
+        case .lose:
+            game = game.draw()
+        case .draw:
+            game = game.draw()
+        }
+
+        // 値の更新に伴いViewも更新
+        updateUI()
     }
 }
 
