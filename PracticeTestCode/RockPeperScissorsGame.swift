@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum Hand {
+enum Hand: CaseIterable {
     // グー, チョキ, パーを定義
     case rock
     case paper
@@ -23,6 +23,10 @@ enum Hand {
         case (.rock, .rock), (.paper, .paper), (.scissors, .scissors):
             return .draw
         }
+    }
+
+    static func random() -> Hand {
+        Self.allCases.randomElement()!
     }
 }
 
