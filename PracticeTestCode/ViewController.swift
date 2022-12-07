@@ -47,4 +47,24 @@ final class ViewController: UIViewController {
         loseCountLabel.text = String(game.loseCount)
         drawCountLabel.text = String(game.drawCount)
     }
+
+    // Storyboard上のUIImageViewに画像を表示
+    private func setUpHandImage(myHand: Hand, opponentHand: Hand) {
+        myHandImageView.image = myHand.image
+        opponentHandImageView.image = opponentHand.image
+    }
+}
+
+// グーチョキパーごとに保持する画像を切り替える拡張機能
+private extension Hand {
+    var image: UIImage {
+        switch self {
+        case .rock:
+            return UIImage(named: "janken_rock")!
+        case .paper:
+            return UIImage(named: "janken_paper")!
+        case .scissors:
+            return UIImage(named: "janken_scissors")!
+        }
+    }
 }
